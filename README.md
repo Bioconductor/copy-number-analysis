@@ -14,3 +14,7 @@ Our purpose here is to provide
 * A tutorial on the exploratory data analysis of these files using "native" Bioconductor capabilities
 * Demonstrate (and evaluate) the capabilities of many of the Bioconductor copy number analysis packages
 
+gists
+=====
+* use "native" Bioconductor to get read counts in bins of a specified length across a tumor chromosome: <a  "href=https://gist.github.com/pshannon-bioc/8677930">binnedCounts.R</a>
+
