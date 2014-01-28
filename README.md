@@ -16,5 +16,6 @@ Our purpose here is to provide
 
 gists
 =====
-* use "native" Bioconductor to get read counts in bins of a specified length across a tumor chromosome: <a  "href=https://gist.github.com/pshannon-bioc/8677930">binnedCounts.R</a>
+* use "native" Bioconductor to get read counts in bins of a specified length across a tumor chromosome: 
+* <a  href="https://gist.github.com/pshannon-bioc/8677930">binnedCounts.R</a>
 
