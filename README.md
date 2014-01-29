@@ -16,8 +16,14 @@ Our purpose here is to provide
 
 Sample Data
 ===========
-* https://s3.amazonaws.com/copy-number-analysis/tumorA.chr4.bam
-* https://s3.amazonaws.com/copy-number-analysis/tumorA.chr4.bam.bai
+* http://s3.amazonaws.com/copy-number-analysis/tumorA.chr4.bam
+* http://s3.amazonaws.com/copy-number-analysis/tumorA.chr4.bam.bai
+
+Use, e.g.,
+<pre><code> 
+download.file(url="http://s3.amazonaws.com/copy-number-analysis/tumorA.chr4.bam.bai",
+              destfile="tumorA.chr4.bam.bai")
+</code></pre>
 
 gists
 =====
