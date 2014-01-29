@@ -14,6 +14,11 @@ Our purpose here is to provide
 * A tutorial on the exploratory data analysis of these files using "native" Bioconductor capabilities
 * Demonstrate (and evaluate) the capabilities of many of the Bioconductor copy number analysis packages
 
+Sample Data
+===========
+* https://s3.amazonaws.com/copy-number-analysis/tumorA.chr4.bam
+* https://s3.amazonaws.com/copy-number-analysis/tumorA.chr4.bam.bai
+
 gists
 =====
 * use "native" Bioconductor to get read counts in bins of a specified length across a tumor chromosome: 
