@@ -18,6 +18,8 @@ Sample Data
 ===========
 * http://s3.amazonaws.com/copy-number-analysis/tumorA.chr4.bam
 * http://s3.amazonaws.com/copy-number-analysis/tumorA.chr4.bam.bai
+* http://s3.amazonaws.com/copy-number-analysis/normalA.chr4.bam
+* http://s3.amazonaws.com/copy-number-analysis/normalA.chr4.bam.bai
 
 Use, e.g.,
 <pre><code> 
