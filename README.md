@@ -32,3 +32,8 @@ gists
 * use "native" Bioconductor to get read counts in bins of a specified length across a tumor chromosome: 
  <a  href="https://gist.github.com/pshannon-bioc/8677930">binnedCounts.R</a>
 
+Exploratory Data Analysis
+==========================
+We have done some primary exploratory data analysis on the Normal and Tumor Sample Datasets using binnedCounts.R
+* a plot of raw counts of Tumor and Normal datasets is shown below: ![] (https://raw.github.com/Bioconductor/copy-number-analysis/4ebd109ee23e5630a631104bb845a7daca59abad/image/count2.png)
+* a plot of the normalized counts of Tumor and Normal datasets is shown below: ![] (https://raw.github.com/Bioconductor/copy-number-analysis/4ebd109ee23e5630a631104bb845a7daca59abad/image/normalised-count2.png)
