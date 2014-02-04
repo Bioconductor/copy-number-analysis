@@ -35,5 +35,5 @@ gists
 Exploratory Data Analysis
 ==========================
 We have done some primary exploratory data analysis on the Normal and Tumor Sample Datasets using binnedCounts.R
-* a plot of raw counts of Tumor and Normal datasets is shown below: ![] (https://raw.github.com/Bioconductor/copy-number-analysis/4ebd109ee23e5630a631104bb845a7daca59abad/image/count2.png)
-* a plot of the normalized counts of Tumor and Normal datasets is shown below: ![] (https://raw.github.com/Bioconductor/copy-number-analysis/4ebd109ee23e5630a631104bb845a7daca59abad/image/normalised-count2.png)
+* reads per bin of 10k bases, with noise at telomeres and centromere: ![] (https://raw.github.com/Bioconductor/copy-number-analysis/master/image/count2.png)
+* both axes modified: y axis is zoomed in, x is average reads per base in each 10k bin: ![] (https://raw.github.com/Bioconductor/copy-number-analysis/master/image/normalised-count2.png)
