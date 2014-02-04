@@ -34,7 +34,7 @@ gists
 
 Exploratory Data Analysis
 ==========================
-We have done some primary exploratory data analysis on the Normal and Tumor Sample Datasets using binnedCounts.R : 
-<a href="https://gist.github.com/sonali-bioc/8795338.js">plotbinnedCounts.R</a>
+We have done some primary exploratory data analysis on the Normal and Tumor Sample Datasets using binnedCounts.R  
+<a href="https://gist.github.com/sonali-bioc/8795338">plotbinnedCounts.R</a>
 * reads per bin of 10k bases, with noise at telomeres and centromere: ![] (https://raw.github.com/Bioconductor/copy-number-analysis/master/image/count2.png)
 * both axes modified: y axis is zoomed in, x is average reads per base in each 10k bin: ![] (https://raw.github.com/Bioconductor/copy-number-analysis/master/image/normalised-count2.png)
