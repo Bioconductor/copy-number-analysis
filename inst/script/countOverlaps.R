@@ -1,28 +1,28 @@
 library(GenomicAlignments)
 library(RUnit)
+
+countBinOverlaps <-
+  function(features, reads, ...)
+  {
+    reads <- resize(granges(reads), width=1)
+    countOverlaps(features, reads)
+  }
+
+summarizeBins <-
+  function(file, seqnames, tilewidth=10000)
+  {
+    stopifnot(is(file, "character") && length(file) > 0)
+    stopifnot(is(seqnames, "character") && length(seqnames) > 0)
     
-cnv_countOverlaps <- 
-    function(bamfilename, chrom, binSize=10000)
-{
-    bf <- BamFile(bamfilename)
-    aln<- readGAlignments(bf)
-    sub <- resize(granges(aln), width=1)
-    tiles <- tileGenome(seqlengths(bf), tilewidth=binSize, 
+    seqlengths <- seqlengths(BamFile(file[[1]]))
+    tiles <- tileGenome(seqlengths[names(seqlengths) %in% seqnames],
+                        tilewidth=tilewidth,
                         cut.last.tile.in.chrom=TRUE)
-    tiles$cnt <- countOverlaps(tiles, sub)
-    tiles[seqnames(tiles)==chrom]
-}
-
-
-test_cnv_countOverlaps <- 
-    function()
-{
-    binSize=10000  
-    tumor.bins <- cnv_countOverlaps("tumorA.chr4.bam", 
-                                    chrom="chr4", 
-                                    binSize=binSize)
     
-    checkEquals(min(tumor.bins$cnt), 0)
-    checkEqualsNumeric(mean(tumor.bins$cnt), 56.66311, tolerance=10e-2)
-    checkEqualsNumeric(max(tumor.bins$cnt),  8638,   tolerance=10e-2)
-}
+    summarizeOverlaps(tiles, fls, countBinOverlaps)
+  }
+
+fls <- dir("~/benchmark/copynumber/", pattern="bam$", full=TRUE)
+counts <- summarizeBins(fls, "chr4")
+
+
