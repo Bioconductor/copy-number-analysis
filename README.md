@@ -1,5 +1,5 @@
-copy number analysis (CNA)
-===========================
+Copy Number Analysis 
+=====================
 
 Explore, compare, and evaluate Bioconductor packages related to genomic copy number analysis
 
@@ -14,6 +14,11 @@ Our purpose here is to provide
 * A tutorial on the exploratory data analysis of these files using "native" Bioconductor capabilities
 * Demonstrate (and evaluate) the capabilities of many of the Bioconductor copy number analysis packages
 
+Literature Resources
+=========================
+* Alkan, C., et al. (2011). <a href="http://www.ncbi.nlm.nih.gov/pubmed/21358748">"Genome structural variation discovery and genotyping."</a> Nat Rev Genet 12(5): 363-376. 
+* Duan J, Zhang J-G, Deng H-W, Wang Y-P (2013) <a href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0059128">Comparative Studies of Copy Number Variation Detection Methods for Next-Generation Sequencing Technologies.</a> PLoS ONE 8(3): e59128. doi:10.1371/journal.pone.0059128
+
 Sample Data
 ===========
 * http://s3.amazonaws.com/copy-number-analysis/tumorA.chr4.bam
@@ -27,14 +32,19 @@ download.file(url="http://s3.amazonaws.com/copy-number-analysis/tumorA.chr4.bam.
               destfile="tumorA.chr4.bam.bai")
 </code></pre>
 
-gists
-=====
-* use "native" Bioconductor to get read counts in bins of a specified length across a tumor chromosome: 
- <a  href="https://gist.github.com/pshannon-bioc/8677930">binnedCounts.R</a>
 
 Exploratory Data Analysis
 ==========================
-We have done some primary exploratory data analysis on the Normal and Tumor Sample Datasets using binnedCounts.R  
-<a href="https://gist.github.com/sonali-bioc/8795338">plotbinnedCounts.R</a>
-* reads per bin of 10k bases, with noise at telomeres and centromere: ![] (https://raw.github.com/Bioconductor/copy-number-analysis/master/image/count2.png)
-* both axes modified: y axis is zoomed in, x is average reads per base in each 10k bin: ![] (https://raw.github.com/Bioconductor/copy-number-analysis/master/image/normalised-count2.png)
+We have done some primary <a href="https://github.com/Bioconductor/copy-number-analysis.wiki.git">Exploratory Data Analysis</a> on the Normal and Tumor Sample Datasets.
+
+List of Tools used
+===================
+Bioconductor Packages
+* <a href="https://github.com/Bioconductor/copy-number-analysis.wiki.git">countOverlaps</a>
+* <a href="https://github.com/Bioconductor/copy-number-analysis.wiki.git">cn.mops</a>
+* <a href="https://github.com/Bioconductor/copy-number-analysis.wiki.git">CNAnorm</a> 
+<br>
+
+Non Biocondcutor packages
+* <a href="https://github.com/Bioconductor/copy-number-analysis.wiki.git">CNV-seq</a>
+* <a href="https://github.com/Bioconductor/copy-number-analysis.wiki.git">Seg-seq</a>
