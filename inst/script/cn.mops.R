@@ -2,13 +2,27 @@ library(cn.mops)
 library(RUnit)
 
 tumor_gr <- getReadCountsFromBAM("tumorA.chr4.bam",
-                                 refSeqName="chr4",WL=10000,mode="unpaired")
+     refSeqName="chr4",WL=10000,mode="unpaired")
 normal_gr <- getReadCountsFromBAM("normalA.chr4.bam",
-                                  refSeqName="chr4",WL=10000,mode="unpaired")
+     refSeqName="chr4",WL=10000,mode="unpaired")
 
-ref_analysis_norm0 <- referencecn.mops(tumor_gr, normal_gr,norm=0) 
+# We need a special normalization because the tumor has made large CNVs
+X <- tumor_gr
+values(X) <- cbind(values(tumor_gr),values(normal_gr)) 
+X <- normalizeGenome(X,normType="mode")
+ 
+# Parameter settings for tumor: 
+# - norm=0, because we already have normalized
+# - integer copy numbers higher than 8 allowed
+# - DNAcopy as segmentation algorithm.
+ref_analysis_norm0 <- referencecn.mops(X[,1], X[,2],
+     norm=0, 
+     I = c(0.025, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 8,16,32,64), 
+     classes = c("CN0", "CN1", "CN2", "CN3", "CN4", "CN5",
+                    "CN6", "CN7","CN8","CN16","CN32","CN64","CN128"),
+     segAlgorithm="DNAcopy")
 
-ref_analysis_norm0 <- referencecn.mops(tumor_gr, normal_gr,norm=0) 
+
 resCNMOPS <- calcIntegerCopyNumbers(ref_analysis_norm0)
 resCNMOPS <-cn.mops:::.replaceNames(resCNMOPS, "tumorA.chr4.bam","tumor")
 
