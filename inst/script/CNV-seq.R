@@ -5,10 +5,10 @@
 ## and SOLiD maching pipeline. For BAM files, they suggest to extract 
 ##locations using the following command
 
-#sarora@rhino01:~/copynumber$ samtools view -F 4 tumorA.chr4.bam |perl -lane 
+#~/copynumber$ samtools view -F 4 tumorA.chr4.bam |perl -lane 
 #'print "F[2]\t$F[3]"' >tumor.hits
 
-#sarora@rhino01:~/copynumber$ samtools view -F 4 normalA.chr4.bam |perl 
+#~/copynumber$ samtools view -F 4 normalA.chr4.bam |perl 
 #-lane 'print "F[2]\t$F[3]"' >normal.hits
 
 
