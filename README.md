@@ -40,11 +40,12 @@ We have done some primary <a href="https://github.com/Bioconductor/copy-number-a
 List of Tools used
 ===================
 Bioconductor Packages
-* <a href="https://github.com/Bioconductor/copy-number-analysis.wiki.git">countOverlaps</a>
-* <a href="https://github.com/Bioconductor/copy-number-analysis.wiki.git">cn.mops</a>
-* <a href="https://github.com/Bioconductor/copy-number-analysis.wiki.git">CNAnorm</a> 
+* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/CountOverlaps-method-from-IRanges-Package">countOverlaps</a>
+* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/cn.mops">cn.mops</a>
+* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/CNAnorm">CNAnorm</a>
+* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/seqCNA">seqCNA</a>
 <br>
 
 Non Biocondcutor packages
-* <a href="https://github.com/Bioconductor/copy-number-analysis.wiki.git">CNV-seq</a>
-* <a href="https://github.com/Bioconductor/copy-number-analysis.wiki.git">Seg-seq</a>
+* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/CNV-seq">CNV-seq</a>
+* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/SegSeq">Seg-seq</a>
