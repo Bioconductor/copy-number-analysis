@@ -56,6 +56,6 @@ segmented_copy_case3 <- HMMsegment(tum_corrected_copy, param3)
 
 plotBias(tum_corrected_copy)
 plotCorrection(tum_corrected_copy)
-plotSegments(tum_corrected_copy, segmented_copy)
+plotSegments(tum_corrected_copy, segm_copy_def)
 
 
