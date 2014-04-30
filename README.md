@@ -44,6 +44,7 @@ Bioconductor Packages
 * <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/cn.mops">cn.mops</a>
 * <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/CNAnorm">CNAnorm</a>
 * <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/seqCNA">seqCNA</a>
+* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/HMMcopy">HMMcopy</a>
 <br>
 
 Non Biocondcutor packages
