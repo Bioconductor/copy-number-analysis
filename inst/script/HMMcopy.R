@@ -58,8 +58,4 @@ plotBias(tum_corrected_copy)
 plotCorrection(tum_corrected_copy)
 plotSegments(tum_corrected_copy, segmented_copy)
 
-png("paul-plotBias.png");plotBias(tum_corrected_copy);dev.off()
 
-png("paul-plotCorrection.png");plotCorrection(tum_corrected_copy); dev.off()
-
-png("paul-plotCorrection.png");plotCorrection(tum_corrected_copy); dev.off()
