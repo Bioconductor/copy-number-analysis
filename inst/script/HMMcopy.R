@@ -10,28 +10,35 @@
 
 tum_readfile <-"chr4_tum_reads.wig"
 nor_readfile <-"chr4_norm_reads.wig"
-mapfile <-"data/map_hg19.wig"
-gcfile <-"data/gc_hg19.wig"
 
+## Note - these files are distributed along with TitanCNA
+## the files distributed along with HMMcopy had inconsistent seqname style
+mapfile <-"GRCh37-lite.map.ws_1000.wig"
+gcfile <-"GRCh37-lite.gc.ws_1000.wig"
+
+## create a RangedData object.
 tum_uncorrected_reads <- wigsToRangedData(tum_readfile, gcfile, mapfile)
 norm_uncorrected_reads <- wigsToRangedData(nor_readfile, gcfile, mapfile)
 
-##correct read counts
+## subset to have reads only from chr4
+tum_uc_reads<- tum_uncorrected_reads["chr4"]
+norm_uc_reads<- norm_uncorrected_reads["chr4"]
 
+##correct read counts
 tum_corrected_copy <- correctReadcount(tum_uncorrected_reads)
 norm_corrected_copy <- correctReadcount(norm_uncorrected_reads)
 
-# Normalizing Tumour by Normal
+## Normalizing Tumour by Normal
 tum_corrected_copy$copy <- tum_corrected_copy$copy - norm_corrected_copy$copy
 
-# Export to SEG format for CNAseq segmentation
+## Export to SEG format for CNAseq segmentation
 rangedDataToSeg(tum_corrected_copy, file = "paul_tum_corrected_copy.seg")
 
-# Segmenting
+## Segmenting
 ## use default segmentation 
 seg_copy_def <- HMMsegment(tum_corrected_copy)
 
-##get parametrs
+## get parametrs
 realparam <- HMMsegment(tum_corrected_copy, getparam = TRUE) # retrieve converged parameters via EM
 
 ## Adjust parameters - case1
@@ -40,22 +47,26 @@ param1$mu <- log(c(1, 1.4, 2, 2.7, 3, 4.5) / 2, 2)
 param1$m <- param1$mu
 segmented_copy_case1 <- HMMsegment(tum_corrected_copy, param1) # perform segmentation via Viterbi
 
-##adjust parameters - case2 ## to decrease no of segments/ 
+## adjust parameters - case2 ## to decrease no of segments/ 
 param2 <- realparam
 param2$strength <- 1e30
 param2$e <- 0.99999999999999
 segmented_copy_case2 <- HMMsegment(tum_corrected_copy, param2)
 
-##adjust parameters - case2 ## to increase no of segments/ 
+## adjust parameters - case2 ## to increase no of segments/ 
 param3 <- realparam
 param3$strength <- 0.1
 param3$e <- 0.1
 segmented_copy_case3 <- HMMsegment(tum_corrected_copy, param3)
 
-# visualization
+## visualization
 
 plotBias(tum_corrected_copy)
 plotCorrection(tum_corrected_copy)
-plotSegments(tum_corrected_copy, segm_copy_def)
+plotSegments(tum_corrected_copy, seg_copy_def)
+plotSegments(tum_corrected_copy, segmented_copy_case1)
+plotSegments(tum_corrected_copy, segmented_copy_case2)
+plotSegments(tum_corrected_copy, segmented_copy_case3)
+
 
 
