@@ -14,6 +14,22 @@ Our purpose here is to provide
 * A tutorial on the exploratory data analysis of these files using "native" Bioconductor capabilities
 * Demonstrate (and evaluate) the capabilities of many of the Bioconductor copy number analysis packages
 
+List of Tools used
+===================
+Bioconductor Packages
+* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/CountOverlaps-method-from-IRanges-Package">countOverlaps</a>
+* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/cn.mops">cn.mops</a>
+* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/CNAnorm">CNAnorm</a>
+* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/seqCNA">seqCNA</a>
+* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/HMMcopy">HMMcopy</a>  
+* <a href ="https://github.com/Bioconductor/copy-number-analysis/wiki/TitanCNA">TitanCNA</a>
+<br>
+
+Non Biocondcutor packages
+* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/CNV-seq">CNV-seq</a>
+* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/SegSeq">Seg-seq</a>
+
+
 Literature Resources
 =========================
 * Alkan, C., et al. (2011). <a href="http://www.ncbi.nlm.nih.gov/pubmed/21358748">"Genome structural variation discovery and genotyping."</a> Nat Rev Genet 12(5): 363-376. 
@@ -37,17 +53,3 @@ Exploratory Data Analysis
 ==========================
 We have done some primary <a href="https://github.com/Bioconductor/copy-number-analysis.wiki.git">Exploratory Data Analysis</a> on the Normal and Tumor Sample Datasets.
 
-List of Tools used
-===================
-Bioconductor Packages
-* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/CountOverlaps-method-from-IRanges-Package">countOverlaps</a>
-* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/cn.mops">cn.mops</a>
-* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/CNAnorm">CNAnorm</a>
-* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/seqCNA">seqCNA</a>
-* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/HMMcopy">HMMcopy</a>  
-* <a href ="https://github.com/Bioconductor/copy-number-analysis/wiki/TitanCNA">TitanCNA</a>
-<br>
-
-Non Biocondcutor packages
-* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/CNV-seq">CNV-seq</a>
-* <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/SegSeq">Seg-seq</a>
