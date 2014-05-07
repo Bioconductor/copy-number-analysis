@@ -25,8 +25,8 @@ tum_uc_reads<- tum_uncorrected_reads["chr4"]
 norm_uc_reads<- norm_uncorrected_reads["chr4"]
 
 ##correct read counts
-tum_corrected_copy <- correctReadcount(tum_uncorrected_reads)
-norm_corrected_copy <- correctReadcount(norm_uncorrected_reads)
+tum_corrected_copy <- correctReadcount(tum_uc_reads)
+norm_corrected_copy <- correctReadcount(norm_uc_reads)
 
 ## Normalizing Tumour by Normal
 tum_corrected_copy$copy <- tum_corrected_copy$copy - norm_corrected_copy$copy
