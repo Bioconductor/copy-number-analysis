@@ -25,8 +25,8 @@ tum_uncorrected_reads <- wigsToRangedData(tum_readfile, gcfile, mapfile)
 norm_uncorrected_reads <- wigsToRangedData(nor_readfile, gcfile, mapfile)
 
 ## subset to have reads only from chr4
-tum_uc_reads<- tum_uncorrected_reads["chr4"]
-norm_uc_reads<- norm_uncorrected_reads["chr4"]
+tum_uc_reads<- tum_uncorrected_reads["4"]
+norm_uc_reads<- norm_uncorrected_reads["4"]
 
 ##correct read counts
 tum_corrected_copy <- correctReadcount(tum_uc_reads)
