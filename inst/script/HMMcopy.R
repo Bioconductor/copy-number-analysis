@@ -7,9 +7,13 @@
 ## bin/readCounter tumorA.chr4.bam > chr4_tum_reads.wig
 ## bin/readCounter normalA.chr4.bam > chr4_norm_reads.wig
 
+## currently the wig files for gc content and mappability have NCBI style
+## of seqnames/ chromsomes. so convert tumor and normal wig files to same. 
+## sed s/=chr/=/ chr4_tumor_reads.wig > chr4_tumor_reads_ncbi.wig
+## sed s/=chr/=/ chr4_tumor_reads.wig > chr4_tumor_reads_ncbi.wig
 
-tum_readfile <-"chr4_tum_reads.wig"
-nor_readfile <-"chr4_norm_reads.wig"
+tum_readfile <-"chr4_tumor_reads_ncbi.wig"
+nor_readfile <-"chr4_normal_reads_ncbi.wig"
 
 ## Note - these files are distributed along with TitanCNA
 ## the files distributed along with HMMcopy had inconsistent seqname style
