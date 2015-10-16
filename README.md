@@ -51,5 +51,5 @@ download.file(url="http://s3.amazonaws.com/copy-number-analysis/tumorA.chr4.bam.
 
 Exploratory Data Analysis
 ==========================
-We have done some primary <a href="https://github.com/Bioconductor/copy-number-analysis.wiki.git">Exploratory Data Analysis</a> on the Normal and Tumor Sample Datasets.
+We have done some primary <a href="https://github.com/Bioconductor/copy-number-analysis/wiki/Exploratory-Data-Analysis">Exploratory Data Analysis</a> on the Normal and Tumor Sample Datasets.
 
