@@ -1,13 +1,20 @@
 paths:
-  con-2: &con-2 /home/anibal/bam_files/1con_sample_Chr07-Chr08-Chr09.bam
-  D2-1: &D2-1 /home/anibal/bam_files/1D2_sample_Chr07-Chr08-Chr09.bam
-
+  con: &con /home/anibal/bam_files/1con_sample_all-chroms.bam
+  D2: &D2 /home/anibal/bam_files/1D2_sample_all-chroms.bam
+  D3: &D3 /home/anibal/bam_files/1D3_sample_all-chroms.bam
+  
 comparisons:
   comparison_1:
-    control: *con-2
-    mutant: *D2-1
+    control: *con
+    mutant: *D2
+  #comparison_2:
+  #  control: *D2
+  #  mutant: *D3
+  comparison_3:
+    control: *con
+    mutant: *D3
 
-chromosomes: Chr07, Chr08, Chr09
+chromosomes: Chr01, Chr02, Chr03, Chr04, Chr05, Chr06, Chr07, Chr08, Chr09, Chr10
 
 parameters:
   annotate: TRUE
