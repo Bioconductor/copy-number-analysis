@@ -1,0 +1,17 @@
+paths:
+  con-2: &con-2 /home/anibal/bam_files/1con_sample_Chr07-Chr08-Chr09.bam
+  D2-1: &D2-1 /home/anibal/bam_files/1D2_sample_Chr07-Chr08-Chr09.bam
+
+comparisons:
+  comparison_1:
+    control: *con-2
+    mutant: *D2-1
+
+chromosomes: Chr07, Chr08, Chr09
+
+parameters:
+  annotate: TRUE
+  bigger: 1.5
+  log2: 0.6
+  pvalue: 0.001
+  window_size: 10000
