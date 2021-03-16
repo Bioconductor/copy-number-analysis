@@ -1,8 +1,7 @@
 dependencies:
   - conda-forge::notebook
-  - r::rstudio
-  - r::r-irkernel
   - r::r-essentials
+  - r::r-irkernel
   - conda-forge::r-devtools
   - pcgr::r-configr
   - conda-forge::r-biocmanager
