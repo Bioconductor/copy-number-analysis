@@ -1,0 +1,11 @@
+name: cnv-seq
+channels:
+  - defaults
+  - bioconda
+  - conda-forge
+  - r
+  - pcgr
+dependencies:
+  - jupyter
+  - r-base=4.0
+  - r-irkernel=1.1

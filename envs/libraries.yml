@@ -1,0 +1,10 @@
+channels:
+  - defaults
+  - bioconda
+  - conda-forge
+  - r
+  - pcgr
+dependencies:
+  - r-configr=0.3
+  - r-biocmanager=1.30
+  - bioconductor-genomicalignments=1.26
