@@ -1,5 +1,6 @@
 dependencies:
   - conda-forge::notebook
+  - conda-forge::r-base
   - r::r-essentials
   - r::r-irkernel
   - conda-forge::r-devtools
