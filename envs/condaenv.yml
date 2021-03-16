@@ -1,7 +1,6 @@
 dependencies:
   - notebook
   - r-base
-  - r-essentials
   - r-irkernel
   - r-devtools
   - r-configr
