@@ -1,9 +1,9 @@
 dependencies:
-  - notebook
-  - rstudio
-  - r-irkernel
-  - r-essentials
-  - r-devtools
-  - r-configr
-  - r-BiocManager
-  - bioconductor-genomicalignments
+  - conda-forge::notebook
+  - r::rstudio
+  - r::r-irkernel
+  - r::r-essentials
+  - conda-forge::r-devtools
+  - pcgr::r-configr
+  - conda-forge::r-biocmanager
+  - bioconda::bioconductor-genomicalignments
