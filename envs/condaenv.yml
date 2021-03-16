@@ -1,4 +1,4 @@
-#name: cnv-seq
+name: cnv-seq-test
 channels:
   - defaults
   - bioconda
@@ -7,9 +7,9 @@ channels:
   - pcgr
 dependencies:
   - jupyter
-  - r-base
-  #- r-irkernel
-  #- r-devtools
-  #- r-configr
-  #- r-biocmanager
-  #- bioconductor-genomicalignments
+  - r-base=4.0
+  - r-irkernel
+  - r-devtools
+  - r-configr
+  - r-biocmanager
+  - bioconductor-genomicalignments
