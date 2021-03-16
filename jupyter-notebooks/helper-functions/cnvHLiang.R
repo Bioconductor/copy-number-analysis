@@ -214,7 +214,7 @@ plot.cnv.all <- function(data, chrom.gap=2e7, colour=5, title=NA, ylim=c(-2,2), 
 #	cat(breaks,"\n", sep=',')
 #	cat(labels,"\n",sep=',')
 	if(colour==2) p <- p + scale_colour_discrete(l=30)
-	else p <- p + scale_colour_brewer(palette='Set1')
+	else p <- p + scale_colour_brewer(palette='Paired')
 	p$legend.position <- 'none'
 	if(!is.na(title)) p$title <- title
 	p

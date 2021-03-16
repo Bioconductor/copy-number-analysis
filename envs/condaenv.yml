@@ -1,0 +1,9 @@
+dependencies:
+  - notebook
+  - rstudio
+  - r-irkernel
+  - r-essentials
+  - r-devtools
+  - r-configr
+  - r-BiocManager
+  - bioconductor-genomicalignments
