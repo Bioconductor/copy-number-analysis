@@ -3,6 +3,6 @@ dependencies:
   - r-base
   - r-irkernel
   - r-devtools
-  - r-configr
+  - pcgr::r-configr
   - r-biocmanager
   - bioconductor-genomicalignments
