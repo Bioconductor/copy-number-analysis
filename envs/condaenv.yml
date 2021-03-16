@@ -1,8 +1,15 @@
+#name: cnv-seq
+channels:
+  - defaults
+  - bioconda
+  - conda-forge
+  - r
+  - pcgr
 dependencies:
-  - notebook
+  - jupyter
   - r-base
-  - r-irkernel
-  - r-devtools
-  - pcgr::r-configr
-  - r-biocmanager
-  - bioconductor-genomicalignments
+  #- r-irkernel
+  #- r-devtools
+  #- r-configr
+  #- r-biocmanager
+  #- bioconductor-genomicalignments
