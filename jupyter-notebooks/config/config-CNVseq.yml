@@ -7,10 +7,10 @@ comparisons:
   comparison_1:
     control: *con
     mutant: *D2
-  #comparison_2:
+  #2_mutants_comp:
   #  control: *D2
   #  mutant: *D3
-  comparison_3:
+  another_comparison:
     control: *con
     mutant: *D3
 

@@ -6,5 +6,6 @@ channels:
   - pcgr
 dependencies:
   - r-configr
+  - r-ggplot2
   - r-biocmanager
   - bioconductor-genomicalignments
