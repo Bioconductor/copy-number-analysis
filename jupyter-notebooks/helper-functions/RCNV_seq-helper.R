@@ -60,15 +60,17 @@ binCounter <- function(features, reads, ignore.strand, ...) {
 #     file
 # }
 
+
+################### Modified as.countsfile function #################
 as.countsfile <- function(hits, fileNameAndLocation) {
     df <- with(rowData(hits), {
         chrome = hits@rowRanges@seqnames
         start = hits@rowRanges@ranges
-        end = hits@rowRanges@ranges@start + hits@rowRanges@ranges@width
-            cbind(data.frame(chromosome=chrome,
-                             start=start,
-                             end=end),
-                             assay(hits))
+        end = hits@rowRanges@ranges@start + hits@rowRanges@ranges@width - 1
+        cbind(data.frame(chromosome=chrome,
+                         start=start,
+                         end=end),
+                         assay(hits))
     })
 
     df = subset(df, select = -c(end))
@@ -78,4 +80,11 @@ as.countsfile <- function(hits, fileNameAndLocation) {
 
     write.table(df, file = fileNameAndLocation, quote=FALSE, row.names=FALSE, sep="\t")
     return(fileNameAndLocation)
+}
+
+################### Added function toGRanges #################
+toGRanges <- function(bed_dataframe){
+    GRanges(seqnames = bed_dataframe$V1, 
+            ranges = IRanges(start = bed_dataframe$V2,
+                             end = bed_dataframe$V3))
 }

@@ -1,23 +1,28 @@
+# paths to bam files
 paths:
-  con: &con /home/anibal/bam_files/1con_sample_all-chroms.bam
-  D2: &D2 /home/anibal/bam_files/1D2_sample_all-chroms.bam
-  D3: &D3 /home/anibal/bam_files/1D3_sample_all-chroms.bam
-  
+  control-1: &control-1 /path/to/bam/file/control-1.bam
+  mutant-1: &mutant-1 /path/to/bam/file/mutant-1.bam
+  mutant-2: &mutant-2 /path/to/bam/file/mutant-2.bam
+
+# path to bed file for varying window sizes (optional)
+bed_path: /path/to/bed/file.bed
+
+# comparisons to be analyzed
 comparisons:
-  comparison_1:
-    control: *con
-    mutant: *D2
-  #2_mutants_comp:
-  #  control: *D2
-  #  mutant: *D3
-  another_comparison:
-    control: *con
-    mutant: *D3
+  control-1-vs-mutant-1:
+    control: *control-1
+    mutant: *mutant-1
+  control-1-vs-mutant-2:
+    control: *control-1
+    mutant: *mutant-2
 
-chromosomes: Chr01, Chr02, Chr03, Chr04, Chr05, Chr06, Chr07, Chr08, Chr09, Chr10
+# list of chromosomes to be analyzed
+chromosomes: Chromosome1, Chromosome2, Chromosome3, AnotherChromosome
 
+# paramters for CNV/window size calculations (defaults are shown)
 parameters:
   annotate: TRUE
+  bed_file: FALSE
   bigger: 1.5
   log2: 0.6
   pvalue: 0.001

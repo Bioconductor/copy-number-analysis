@@ -1,0 +1,36 @@
+bam_paths:
+  1-C7: &1-C7 /home/anibal/bam_files/coffee/1-C7.bam
+  15-A7: &15-A7 /home/anibal/bam_files/coffee/15-A7.bam
+  15-D6: &15-D6 /home/anibal/bam_files/coffee/15-D6.bam
+  16-C5: &16-C5 /home/anibal/bam_files/coffee/16-C5.bam
+  16-D7: &16-D7 /home/anibal/bam_files/coffee/16-D7.bam
+
+bed_path: /home/anibal/bed_files/Arbor_CoffexomeV1-PredictedPotentialCovg-Exons.table.f1-f4f10f6.bed
+
+  
+comparisons:
+  1-C7-vs-15-A7:
+    control: *1-C7
+    mutant: *15-A7
+#   1-C7-vs-15-D6:
+#     control: *1-C7
+#     mutant: *15-D6
+#   1-C7-vs-16-C5:
+#     control: *1-C7
+#     mutant: *16-C5
+#   1-C7-vs-16-D7:
+#     control: *1-C7
+#     mutant: *16-D7
+
+
+chromosomes: NC_039898.1,NC_039899.1,NC_039900.1,NC_039901.1,NC_039902.1,NC_039903.1,NC_039904.1,NC_039905.1,NC_039906.1,NC_039907.1,NC_039908.1,NC_039909.1,NC_039910.1,NC_039911.1,NC_039912.1,NC_039913.1,NC_039914.1,NC_039915.1,NC_039916.1,NC_039917.1,NC_039918.1,NC_039919.1
+
+# chromosomes: NC_039904.1
+
+parameters:
+  annotate: TRUE
+  bed_file: TRUE
+  bigger: 1.5
+  log2: 0.6
+  pvalue: 0.001
+  window_size: 10000

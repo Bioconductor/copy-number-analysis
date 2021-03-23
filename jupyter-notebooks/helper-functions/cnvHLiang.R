@@ -149,7 +149,7 @@ cnv.print <- function(cnv, file="")
 		sub <- subset(cnv, cnv==i)
 		start <- ceiling(mean(c(min(sub$start), min(sub$position))))
 		end <- floor(mean(c(max(sub$end), max(sub$position))))
-		cat(paste('CNVR_',i,sep=''), paste('chr', unique(sub$chromosome), sep=''), start, end, end-start+1, unique(sub$cnv.log2), unique(sub$cnv.p.value), sep="\t", file=file, fill=TRUE, append=TRUE)
+		cat(paste('CNVR_',i,sep=''), paste(unique(sub$chromosome), sep=''), start, end, end-start+1, unique(sub$cnv.log2), unique(sub$cnv.p.value), sep="\t", file=file, fill=TRUE, append=TRUE)
 	}
 }
 
